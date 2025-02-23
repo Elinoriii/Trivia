@@ -63,10 +63,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void creareDialog() {
-
-
-
+    private void creareDialog()
+    {
+        CustomDialog customDialog = new CustomDialog(this);
+        customDialog.show();
     }
 
     @Override
@@ -106,5 +106,15 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             tvQuestionNumber.setText("Question number: " + (collection.getIndex() + 1));
         }
         nextQuestion();
+    }
+
+    public void reset()
+    {
+        this.points = 0;
+        collection.initQuestion();
+        tvPoints.setText("Points: " + 0);
+        tvQuestionNumber.setText("Question number: " + 1);
+        tvGameOver.setVisibility(View.INVISIBLE);
+        this.nextQuestion();
     }
 }
