@@ -14,6 +14,7 @@ import android.widget.TextView;
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btna1, btna2, btna3, btna4;
+
     private TextView tvQuestion;
     private TextView tvQuestionNumber, tvPoints, tvGameOver;
     private Collection collection;
