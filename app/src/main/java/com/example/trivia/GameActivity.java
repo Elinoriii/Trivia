@@ -17,7 +17,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView tvQuestion;
     private TextView tvQuestionNumber, tvPoints, tvGameOver;
-    private Collection collection;
+    private Collection2 collection;
     private Question q;
     private int points = 0;
     private LinearLayout li;
@@ -51,7 +51,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         tvGameOver.setVisibility(View.INVISIBLE);
 
-        collection = new Collection();
+        collection = new Collection2();
         collection.initQuestion();
 
         nextQuestion();
@@ -117,6 +117,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 points++;
             }
         }
+
         tvPoints.setText("points: " + points);
         if (collection.isNotLastQuestion())
         {
